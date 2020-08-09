@@ -1,0 +1,8 @@
+def insertionSort(alist):
+    for index in range(len(alist)): #遍历每一个元素。将元素插入到有序表中进行对比，排序
+        position = index #记录插入元素的下标
+        while position > 0 and alist[position-1] > alist [position]: #对新插入的元素对比并排序
+            alist[position], alist[position-1] = alist[position-1], alist[position] #交换逆序的元素
+            position -= 1 #插入元素和有序表中的元素从后往前逐个对比
+    return alist #返回排序好的列表
+print(insertionSort([8, 5, 6, 4, 9, 78, 25, 65]))
